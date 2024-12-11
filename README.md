@@ -46,6 +46,31 @@ npx playwright test --headed
 
 The `--headed` option ensures the browser is launched with its UI, reducing the likelihood of being blocked by anti-bot measures.
 
+#### Running a Specific Test by Line Number
+
+You can run a specific test by pointing to a file and line number using the following command:
+
+```bash
+npx playwright test scenarios/homePage.spec.ts:15 --headed
+```
+
+This will execute the test located at **line 15** in the `homePage.spec.ts` file.
+
+#### Running Tests with Report and Screenshots
+
+To generate a report and capture **screenshots on failure**, use the following command:
+
+```bash
+npx playwright test --headed --reporter=html
+```
+
+- **Screenshots** will be automatically taken on test failures and included in the report.
+- The **HTML report** will be generated in the `playwright-report` directory. You can open it by running:
+
+  ```bash
+  npx playwright show-report
+  ```
+
 ---
 
 ## 3. Structure
