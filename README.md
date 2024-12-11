@@ -36,15 +36,13 @@ To get started with running the Playwright tests in this repository, follow the 
 
 ### Running the Tests
 
-Most likely due to anti-bot protections on Groupon's production site, tests **only work in `--headed` mode**. This mode runs tests with the browser UI visible, which helps bypass some detection mechanisms.
+Most likely due to anti-bot protections on Groupon's production site, tests **only work in `headed` mode**. This mode runs tests with the browser UI visible, which helps bypass some detection mechanisms.
 
 Run tests with the following command:
 
 ```bash
 npm run test
 ```
-
-The `--headed` option ensures the browser is launched with its UI, reducing the likelihood of being blocked by anti-bot measures.
 
 #### Running a Specific Test by Line Number
 
@@ -54,7 +52,7 @@ You can run a specific test by pointing to a file and line number using the foll
 npm run test tests/scenarios/main-page.spec.ts:10
 ```
 
-This will execute the test located at **line 15** in the `homePage.spec.ts` file.
+This will execute the test located at **line 10** in the `main-page.spec.ts` file.
 
 #### Running Tests with Report and Screenshots
 
