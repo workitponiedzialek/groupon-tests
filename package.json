@@ -1,0 +1,21 @@
+{
+  "name": "groupon-tests",
+  "version": "1.0.0",
+  "description": "Repository contains automated scenarios for Groupon main page in Playwright",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/workitponiedzialek/groupon-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/workitponiedzialek/groupon-tests/issues"
+  },
+  "homepage": "https://github.com/workitponiedzialek/groupon-tests#readme",
+  "dependencies": {
+    "@playwright/test": "^1.49.0",
+    "playwright": "^1.49.0"
+  }
+}
