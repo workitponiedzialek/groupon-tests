@@ -26,7 +26,7 @@ To get started with running the Playwright tests in this repository, follow the 
 
 2. **Install Dependencies**
    ```bash
-   npm install
+   npm ci
    ```
 
 3. **Install Playwright Browsers**
