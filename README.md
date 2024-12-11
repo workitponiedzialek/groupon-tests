@@ -26,7 +26,7 @@ To get started with running the Playwright tests in this repository, follow the 
 
 2. **Install Dependencies**
    ```bash
-   npm install
+   npm ci
    ```
 
 3. **Install Playwright Browsers**
@@ -36,40 +36,38 @@ To get started with running the Playwright tests in this repository, follow the 
 
 ### Running the Tests
 
-Most likely due to anti-bot protections on Groupon's production site, tests **only work in `--headed` mode**. This mode runs tests with the browser UI visible, which helps bypass some detection mechanisms.
+Most likely due to anti-bot protections on Groupon's production site, tests **only work in `headed` mode**. This mode runs tests with the browser UI visible, which helps bypass some detection mechanisms.
 
 Run tests with the following command:
 
 ```bash
-npx playwright test --headed
+npm run test
 ```
-
-The `--headed` option ensures the browser is launched with its UI, reducing the likelihood of being blocked by anti-bot measures.
 
 #### Running a Specific Test by Line Number
 
 You can run a specific test by pointing to a file and line number using the following command:
 
 ```bash
-npx playwright test scenarios/homePage.spec.ts:15 --headed
+npm run test tests/scenarios/main-page.spec.ts:10
 ```
 
-This will execute the test located at **line 15** in the `homePage.spec.ts` file.
+This will execute the test located at **line 10** in the `main-page.spec.ts` file.
 
 #### Running Tests with Report and Screenshots
 
 To generate a report and capture **screenshots on failure**, use the following command:
 
 ```bash
-npx playwright test --headed --reporter=html
+npm run test:report
 ```
 
 - **Screenshots** will be automatically taken on test failures and included in the report.
 - The **HTML report** will be generated in the `playwright-report` directory. You can open it by running:
 
-  ```bash
-  npx playwright show-report
-  ```
+```bash
+npm run report:show
+```
 
 ---
 
@@ -81,7 +79,7 @@ The repository follows a structured design to separate different responsibilitie
 .
 ├── scenarios/
 ├── pages/
-└── region/
+└── regions/
 ```
 
 ### 1. `scenarios`
@@ -91,7 +89,7 @@ The repository follows a structured design to separate different responsibilitie
 
   **Example**: `main-page.spec.ts` contains tests related to interactions with the Groupon home page.
 
-### 2. `region`
+### 2. `regions`
 
 - **Purpose**: Contains reusable components and locators that can be shared across different pages.
 - **Description**: This folder includes modular files that encapsulate locators and actions for specific components used in multiple pages, such as headers, footers, and buttons.
